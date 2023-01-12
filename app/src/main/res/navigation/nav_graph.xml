@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/leagueListFragment">
+
+    <fragment
+        android:id="@+id/leagueListFragment"
+        android:name="com.example.footballapp.fragments.LeagueListFragment"
+        android:label="Standings"
+        tools:layout="@layout/fragment_league_list" >
+        <action
+            android:id="@+id/action_leagueListFragment_to_clubListFragment"
+            app:destination="@id/clubListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubListFragment"
+        android:name="com.example.footballapp.fragments.ClubListFragment"
+        android:label="fragment_club_list"
+        tools:layout="@layout/fragment_club_list" />
+</navigation>
